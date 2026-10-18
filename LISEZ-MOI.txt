@@ -1,0 +1,43 @@
+MARDAM AeroMargin Pro — version installable (appli web)
+=======================================================
+
+CONTENU DU DOSSIER
+  index.html              l'application
+  sw.js                   fonctionnement hors ligne
+  manifest.webmanifest    nom, icône et affichage plein écran
+  icon-*.png              icônes de l'écran d'accueil
+
+1. METTRE EN LIGNE (une seule fois)
+  - Déposer les fichiers du dossier, tels quels, dans un même dossier d'un serveur web en HTTPS
+    (par exemple un dépôt GitHub Pages, comme MARDAM AeroDesk Pro).
+  - L'appli s'ouvre sur un écran de connexion (identifiant + mot de passe). Les données AMM
+    intégrées sont chiffrées dans le fichier : sans le mot de passe, elles sont illisibles.
+    Ne communiquer le mot de passe qu'aux personnes autorisées.
+  - Le HTTPS est obligatoire pour l'installation, le hors ligne et le déchiffrement.
+
+2. INSTALLER SUR IPAD / IPHONE
+  - Ouvrir l'adresse dans Safari.
+  - Bouton Partager > « Sur l'écran d'accueil » > Ajouter.
+  - Lancer l'appli depuis l'icône AeroMargin : plein écran, fonctionne ensuite sans réseau
+    (hangar, parking avion).
+
+3. INSTALLER SUR PC
+  - Ouvrir l'adresse dans Edge ou Chrome.
+  - Icône « Installer l'application » dans la barre d'adresse (ou menu > Applications > Installer).
+
+4. MISES À JOUR
+  - Remplacer les fichiers sur le serveur par ceux de la nouvelle version.
+  - À la prochaine ouverture avec du réseau, l'appli se met à jour seule et propose « Recharger ».
+
+5. CONNEXION
+  - La session reste ouverte tant que l'appli n'est pas fermée ; ensuite, nouvelle connexion.
+  - « Mot de passe oublié / Changer » : change le mot de passe sur l'appareil utilisé.
+    Mot de passe oublié : utiliser le code de secours.
+  - Le mot de passe d'origine reste valable sur les appareils où il n'a pas été changé.
+
+6. DONNÉES
+  - Tests, révisions AMM importées et réglages restent sur chaque appareil.
+  - Sauvegarde : onglet Historique > « Créer une sauvegarde » (fichier à conserver),
+    puis « Restaurer une sauvegarde » sur un autre appareil.
+  - Supprimer l'icône de l'écran d'accueil efface les données de l'appli sur cet appareil :
+    faire une sauvegarde avant.
