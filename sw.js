@@ -1,5 +1,5 @@
-/* MARDAM AeroMargin Pro — cache hors ligne. Version baa9dc4bac */
-var CACHE = "aeromargin-baa9dc4bac";
+/* MARDAM AeroMargin Pro — cache hors ligne. Version 817db866d1 */
+var CACHE = "aeromargin-817db866d1";
 var FILES = ["./", "./index.html", "./manifest.webmanifest", "./icon-180.png", "./icon-192.png", "./icon-512.png", "./icon-512-maskable.png"];
 self.addEventListener("install", function(e){
   e.waitUntil(caches.open(CACHE).then(function(c){ return c.addAll(FILES); }).then(function(){ return self.skipWaiting(); }));
@@ -14,6 +14,8 @@ self.addEventListener("fetch", function(e){
   if (e.request.method !== "GET") return;
   var url = new URL(e.request.url);
   if (url.origin !== self.location.origin) return;
+  /* liste des comptes : toujours le réseau d'abord */
+  if (/users\.json$/.test(url.pathname)){ e.respondWith(fetch(e.request).catch(function(){ return caches.match(e.request, {ignoreSearch:true}); })); return; }
   e.respondWith(caches.match(e.request, {ignoreSearch:true}).then(function(hit){
     var net = fetch(e.request).then(function(r){
       if (r && r.ok){ var cp = r.clone(); caches.open(CACHE).then(function(c){ c.put(e.request, cp); }); }

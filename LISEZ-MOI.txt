@@ -29,11 +29,18 @@ CONTENU DU DOSSIER
   - Remplacer les fichiers sur le serveur par ceux de la nouvelle version.
   - À la prochaine ouverture avec du réseau, l'appli se met à jour seule et propose « Recharger ».
 
-5. CONNEXION
-  - La session reste ouverte tant que l'appli n'est pas fermée ; ensuite, nouvelle connexion.
-  - « Mot de passe oublié / Changer » : change le mot de passe sur l'appareil utilisé.
-    Mot de passe oublié : utiliser le code de secours.
-  - Le mot de passe d'origine reste valable sur les appareils où il n'a pas été changé.
+5. COMPTES ET CONNEXION
+  - Chaque personne a son identifiant et son mot de passe. La session reste ouverte tant que
+    l'appli n'est pas fermée.
+  - Administrateur (Docs AMM > Comptes utilisateurs) : créer un compte, donner un nouveau mot
+    de passe, supprimer un compte. Le message à envoyer à la personne est prêt à copier.
+  - Après chaque modification : « Publier la liste (users.json) », puis déposer users.json dans
+    le dépôt GitHub, à côté de index.html. Les autres appareils prennent la nouvelle liste à
+    leur prochaine connexion avec réseau.
+  - Sur un appareil partagé, chaque compte a son propre historique ; les révisions AMM
+    importées sont communes.
+  - « Mot de passe oublié / Changer » : chacun peut choisir son propre mot de passe (valable sur
+    l'appareil utilisé). En cas d'oubli : l'administrateur donne un nouveau mot de passe.
 
 6. DONNÉES
   - Tests, révisions AMM importées et réglages restent sur chaque appareil.
